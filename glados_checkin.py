@@ -125,6 +125,8 @@ class GLaDOSChecker:
         status_success, status_result = self.check_status()
 
         self.send_notification(status_result, checkin_result)
+        print(f"🔔 签到结果: {checkin_result}")
+        print(f"📊 状态结果: {status_result}")
         if not success or not status_success:
             print("❌ 签到或状态查询失败")
             raise SystemExit(1)
